@@ -32,3 +32,8 @@ catkin_make
 ```
 roslaunch robot_arm_pkg check_motors.launch
 ```
+it will show this page 
+
+<div>
+<img src="https://user-images.githubusercontent.com/101142149/181014160-8f2daae1-fd2e-49ae-acf7-0d72a10cc972.jpg" width="400">
+  </div>
