@@ -13,3 +13,22 @@ mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
 ```
+3 - now we will add the robot arm package in src folder :
+```
+cd ~/catkin_ws/src
+git clone https://github.com/smart-methods/arduino_robot_arm.git 
+```
+4 - if everything is ok , we will install the dependencies :
+```
+cd ~/catkin_ws
+rosdep install --from-paths src --ignore-src -r -y
+sudo apt-get install ros-kinetic-moveit
+sudo apt-get install ros-kinetic-joint-state-publisher ros-kinetic-joint-state-publisher-gui
+sudo apt-get install ros-kinetic-gazebo-ros-control joint-state-publisher
+sudo apt-get install ros-kinetic-ros-controllers ros-kinetic-ros-control
+catkin_make
+```
+5 - Excellent, let's try if the install is correct
+```
+roslaunch robot_arm_pkg check_motors.launch
+```
