@@ -37,3 +37,23 @@ it will show this page
 <div>
 <img src="https://user-images.githubusercontent.com/101142149/181014160-8f2daae1-fd2e-49ae-acf7-0d72a10cc972.jpg" width="400">
   </div>
+  
+  #### Now lat's install arduino IDE to see the actuall result 
+  Follow the following steps :
+  
+  1 - Go to arduino Download page , then install the package :
+  [downlod arduino](https://www.arduino.cc/en/software)
+  then choose linux 64 (depend on your divase)
+  
+  2 - Now extract the file and place it on the home page , You can change the name or leave it .
+  
+ 3 - Open your terminal and add this code :
+ ```
+ cd arduino 
+ sudo ./install.sh
+ ```
+ 4 - Then open a new terminal in arduino file and add this code to open the package :
+ ```
+ ./arduino
+ ```
+##### Great , now lat's install the library
