@@ -56,4 +56,34 @@ it will show this page
  ```
  ./arduino
  ```
-##### Great , now lat's install the library
+5 - Great , now lat's install rosserial , just add this tow line :
+```
+sudo apt-get install ros-kinetic-rosserial-arduino
+sudo apt-get install ros-kinetic-rosserial
+```
+6 -  we need the library now :
+```
+cd <sketchbook>/libraries
+rm -rf ros_lib
+rosrun rosserial_arduino make_libraries.py .
+```
+7 - This step is very important ,We need to change the permissions , in terminal add this code then select arduino port:
+```
+ls -l /dev |grep ttyUSB
+sudo chmod -R 777 /dev/ttyUSB0
+```
+#### Last thing to do is to run the package 
+
+We will run tow packages (RViz) and (GAZBO)
+
+To run RViz :
+```
+roslaunch robot_arm_pkg check_motors.launch
+```
+To run gazebo
+```
+roslaunch robot_arm_pkg check_motors.launch
+roslaunch robot_arm_pkg check_motors_gazebo.launch
+rosrun robot_arm_pkg joint_states_to_gazebo.py
+```
+
